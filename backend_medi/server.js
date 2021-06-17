@@ -27,19 +27,33 @@ app.get("/", (req, res) => {
 
 
 app.get('/all/:name', cors(), (req, res) => {
-    console.log("name", req.params.name);
+    // console.log("name", req.params.name);
     const Name = req.params.name;
     connection.connect();
+    const data = [];
     //${req.params.nameq}
     connection.query(`SELECT * FROM netmeds WHERE name = '${Name}'`, function(error, results, fields) {
-        const data = [];
         if (error) throw error;
-        console.log('The solution is: ', results);
-        data.push(results);
-        return res.json(data);
+        data.push(results[0]);
+        connection.query(`SELECT * FROM pharmeasy WHERE name = '${Name}'`, function(error, results, fields) {
+            if (error) throw error;
+            data.push(results[0]);
+            connection.query(`SELECT * FROM onemg WHERE name = '${Name}'`, function(error, results, fields) {
+                if (error) throw error;
+                data.push(results[0]);
+                // console.log(results[0])
+
+                connection.end();
+                console.log(data)
+                return res.json(data)
+
+            });
+        });
     });
 
-    connection.end();
+
+
+
 
 });
 
