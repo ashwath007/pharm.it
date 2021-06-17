@@ -9,8 +9,8 @@ function Medicine(props) {
        .then(response => {
         return response.json()
        }).then(data => {
-            console.log(data)
-           setmedicine(data.data);
+            console.log(data[0])
+           setmedicine(data[0]);
            setinp("");
            
        }).catch(err => {
@@ -59,13 +59,13 @@ function Medicine(props) {
                      </div>
                      <div className="div__arrangment">
                          <h4 className="left__name">Website:</h4>
-                         <h6 className="tabletname">   {med.from}</h6>
+                         <h6 className="tabletname">   {med.url}</h6>
                      </div>
                      <div className="div__arrangment">
                          <h4 className="left__name">Price:</h4>
                          <h6 className="tabletname">   {med.price}</h6>
                      </div>
-                     <a href={med.link} target="_blank"><button className="buybtn">Buy Now</button></a>
+                     <a href={med.url} target="_blank"><button className="buybtn">Buy Now</button></a>
                  </div>
                 ))):<h1> Loading...</h1>}
                
