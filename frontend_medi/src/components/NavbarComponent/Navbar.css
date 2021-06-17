@@ -1,0 +1,42 @@
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    background-image: url(background.jpg);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar__brand
+{
+    margin-left: 10%;
+    color: #FFC700;
+}
+.navbar__buttons
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15%;
+    width: 230px;
+    justify-content: space-between;
+}
+.product__button
+{
+    /* padding-left: 20px; */
+    color: black;
+    border-color: #4B0082;
+    border-style: none;
+    font-size: medium;
+}
+.product__button:hover{
+    border-bottom: 2px solid #FFC700;
+}
+.company__brand 
+{
+    font-family: 'Lobster', cursive;
+    font-size: 2.5vw;
+    color: whitesmoke;
+
+}
+

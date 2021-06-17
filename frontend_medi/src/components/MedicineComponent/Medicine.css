@@ -1,0 +1,134 @@
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #4B0082;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__brand
+{
+    margin-left: 10%;
+    color: #FFC700;
+}
+.navbar__buttons1
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15%;
+    width: auto;
+    justify-content: space-between;
+   
+}
+.medi__input1
+{
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+}
+.product__button1
+{
+    /* padding-left: 20px; */
+    color: #4B0082;
+    background-color: #fbcffc;;
+    
+    border-style: none;
+    font-size: medium;
+    border-radius: 10px;
+    height: 35px;
+    margin-left: 10px;
+    width: 80px;
+    transition: 100ms;
+    transform: scale(1);
+}
+.product__button1:hover{
+    color: white;
+    background-color: #aa2ee6;
+    transform: scale(1.1);
+}
+.display__medicine
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid salmon;
+    width: 400px;
+    height: autopx;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    transition: 100ms;
+    transform: scale(1);
+    animation-delay: 50ms;
+}
+.display__medicine:hover
+{
+    transform: scale(1.1);
+}
+.tabletname
+{
+    background-color: #E95252;
+    color: white;
+    margin-right: 20px;
+    padding: 12px;
+}
+.div__arrangment
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    /* margin-right: -20px; */
+}
+.left__name
+{
+    margin-left: 10px;
+}
+.compname
+{
+    background-color: #E95252;
+    color: white;
+    margin-right: -10px;
+    padding: 12px;
+    padding-left: 20px;
+}
+.buybtn
+{
+    background-color: #ff8585;
+    color: whitesmoke;
+    border-color: #E95252;
+    border-radius: 30px;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 100ms;
+    transform: scale(1);
+}
+.buybtn:hover
+{
+    transform: scale(1.1);
+    background-color: #fb3640;
+    color: white;
+}
+
+.display
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    justify-content: space-evenly;
+    height: 600px;
+    background-image: url(background.jpg);
+}
+
+.company__brand 
+{
+    font-family: 'Lobster', cursive;
+    font-size: 2.5vw;
+    color: whitesmoke;
+}
