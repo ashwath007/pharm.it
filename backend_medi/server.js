@@ -23,8 +23,8 @@ app.use(cors());
 
 app.get("/", (req, res) => {
     connection.connect();
-
-    connection.query('SELECT * FROM netmeds', function(error, results, fields) {
+    //${req.params.nameq}
+    connection.query(`SELECT * FROM netmeds WHERE name = 'Crocin'`, function(error, results, fields) {
         if (error) throw error;
         console.log('The solution is: ', results);
     });
