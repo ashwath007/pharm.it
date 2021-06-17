@@ -1,0 +1,39 @@
+CREATE DATABASE PHARMIT;
+USE PHARMIT;
+CREATE TABLE pharmeasy (
+	name varchar(50),
+    company varchar(60),
+    price double,
+    offer double,
+    url varchar(255),
+    final double,
+    image varchar(255)
+);
+CREATE TABLE netmeds (
+	name varchar(50),
+    company varchar(60),
+    price double,
+    offer double,
+    url varchar(255),
+    final double,
+	image varchar(255)
+);
+CREATE TABLE onemg (
+	name varchar(50),
+    company varchar(60),
+    price double,
+    offer double,
+    url varchar(255),
+    final double,
+	image varchar(255)
+);
+
+
+INSERT INTO onemg (name, company, price, offer, url, final, image) VALUES ('Crocin','GlaxoSmithKline Consumer Healthcare',30.91,15.5,'https://www.1mg.com/otc/crocin-650-advance-tablet-otc638914',25.36, 'https://onemg.gumlet.io/image/upload/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/v1614063272/huamtvxifr3gyeeg0rrg.jpg' );
+INSERT INTO netmeds (name, company, price, offer, url, final, image) VALUES ('Crocin','GlaxoSmithKline Consumer Healthcare',30.55,15.00,'https://www.netmeds.com/prescriptions/crocin-advance-650-tablet-15s',28.36, 'https://www.netmeds.com/images/product-v1/600x600/923317/crocin_advance_650_tablet_15s_0_0.jpg' );
+INSERT INTO pharmeasy (name, company, price, offer, url, final, image) VALUES ('Crocin','GlaxoSmithKline Consumer Healthcare',30.55,15.00,'https://pharmeasy.in/online-medicine-order/crocin-advance-500mg-strip-of-20-tablets-493507',28.36, 'https://cdn01.pharmeasy.in/dam/products/I43006/crocin-650mg-advance-tab-15s-front-2-1620650071.jpg?dim=80x80&dpr=1.25&q=100' );
+
+DROP TABLE pharmeasy;
+
+SELECT * FROM pharmeasy;
+SELECT * FROM onemg;
